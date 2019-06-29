@@ -223,7 +223,7 @@
   </a>
 </li-->
 <li class="nav-item">
-  <a class="nav-link" href="basic_elements.html">
+  <a class="nav-link" href="pipeline.html">
     <span class="menu-title">Import training data</span>
     <i class="mdi mdi-format-list-bulleted menu-icon"></i>
   </a>
@@ -279,7 +279,7 @@
               <div class="border-bottom">
                 <h6 class="font-weight-normal mb-3">Pipelines</h6>
               </div>
-              <a class="btn btn-block btn-lg btn-gradient-primary mt-4" href="../forms/pipeline.html">+ Add a pipeline</a>
+              <button class="btn btn-block btn-lg btn-gradient-primary mt-4">+ Add a pipeline</button>
               <div class="mt-4">
                 <div class="border-bottom">
                   <p class="text-secondary">Running</p>
@@ -303,7 +303,7 @@
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Forms</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Import training data</li>
+                <li class="breadcrumb-item active" aria-current="page">New pipeline</li>
               </ol>
             </nav>
           </div>
@@ -397,17 +397,30 @@
             <div class="col-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Paste Email Here</h4>
-
+                  <h4 class="card-title">New pipeline</h4>
+                  <p class="card-description">Select auto to generate a preset based on past data</p>
                   <form class="forms-sample">
                     <div class="form-group">
-                      <label for="exampleInputName1">Email title</label>
-                      <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
+                      <label for="exampleInputName1">Select Presets</label>
+                      <select id=exampleInputName1 class="browser-default custom-select">
+                        <option selected>Auto</option>
+                        <option value="1">Custom 1</option>
+                        <option value="2">Custom 2</option>
+                        <option value="3">+ New Preset</option>
+                      </select>
                     </div>
 
                     <div class="form-group">
-                      <label for="exampleTextarea1">Email body</label>
-                      <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                      <label for="exampleTextarea1">Department</label>
+                      <input class="form-control" id="exampleTextarea1" rows="4" disabled value="Accounting"/>
+                    </div>
+                    <div class="form-group  checkbox-line" style="display: flex;">
+                      <label for="cb1">Payment notice</label>
+                      <input type="checkbox" class="form-control" id="cb1" rows="4" disabled checked/>
+                      <label for="cb12">Official records</label>
+                      <input type="checkbox" class="form-control" id="cb12" rows="4" disabled />
+                      <label for="cb13">Delivery </label>
+                      <input type="checkbox" class="form-control" id="cb13" rows="4" disabled checked/>
                     </div>
                     <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
                     <button class="btn btn-light">Cancel</button>
