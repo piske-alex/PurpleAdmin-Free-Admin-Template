@@ -126,9 +126,9 @@ $(function() {
 
     // These labels appear in the legend and in the tooltips when hovering different arcs
     labels: [
-      'Pink',
-      'Blue',
-      'Yellow',
+      'Accounting',
+      'Admin',
+      'Trading',
     ]
   };
   var doughnutPieOptions = {
