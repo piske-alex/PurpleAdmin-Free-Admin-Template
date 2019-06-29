@@ -220,7 +220,7 @@
             labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG'],
             datasets: [
               {
-                label: "CHN",
+                label: "Account",
                 borderColor: gradientStrokeViolet,
                 backgroundColor: gradientStrokeViolet,
                 hoverBackgroundColor: gradientStrokeViolet,
@@ -232,7 +232,7 @@
                 data: [20, 40, 15, 35, 25, 50, 30, 20]
               },
               {
-                label: "USA",
+                label: "Revised",
                 borderColor: gradientStrokeRed,
                 backgroundColor: gradientStrokeRed,
                 hoverBackgroundColor: gradientStrokeRed,
@@ -244,7 +244,7 @@
                 data: [40, 30, 20, 10, 50, 15, 35, 40]
               },
               {
-                label: "UK",
+                label: "e-Advice",
                 borderColor: gradientStrokeBlue,
                 backgroundColor: gradientStrokeBlue,
                 hoverBackgroundColor: gradientStrokeBlue,
@@ -328,38 +328,48 @@
       var gradientStrokeGreen = ctx.createLinearGradient(0, 0, 0, 300);
       gradientStrokeGreen.addColorStop(0, 'rgba(6, 185, 157, 1)');
       gradientStrokeGreen.addColorStop(1, 'rgba(132, 217, 210, 1)');
-      var gradientLegendGreen = 'linear-gradient(to right, rgba(6, 185, 157, 1), rgba(132, 217, 210, 1))';      
+      var gradientLegendGreen = 'linear-gradient(to right, rgba(6, 185, 157, 1), rgba(132, 217, 210, 1))';
+
+        var gradientStrokeBlack = ctx.createLinearGradient(0, 0, 0, 300);
+        gradientStrokeBlack.addColorStop(0, 'rgba(0, 0, 0, 1)');
+        gradientStrokeBlack.addColorStop(1, 'rgba(128, 128, 128, 1)');
+        var gradientLegendBlack = 'linear-gradient(to right, rgba(0, 0, 0, 1), rgba(128, 128, 128, 1))';
 
       var trafficChartData = {
         datasets: [{
-          data: [30, 30, 40],
+          data: [10, 20, 30, 40],
           backgroundColor: [
             gradientStrokeBlue,
             gradientStrokeGreen,
-            gradientStrokeRed
+            gradientStrokeRed,
+            gradientStrokeBlack
           ],
           hoverBackgroundColor: [
             gradientStrokeBlue,
             gradientStrokeGreen,
-            gradientStrokeRed
+            gradientStrokeRed,
+            gradientStrokeBlack
           ],
           borderColor: [
             gradientStrokeBlue,
             gradientStrokeGreen,
-            gradientStrokeRed
+            gradientStrokeRed,
+            gradientStrokeBlack
           ],
           legendColor: [
             gradientLegendBlue,
             gradientLegendGreen,
-            gradientLegendRed
+            gradientLegendRed,
+            gradientLegendBlack
           ]
         }],
     
         // These labels appear in the legend and in the tooltips when hovering different arcs
         labels: [
-          'Search Engines',
-          'Direct Click',
-          'Bookmarks Click',
+          'Opened',
+          'Ignored',
+          'Deleted',
+            'Reported',
         ]
       };
       var trafficChartOptions = {
